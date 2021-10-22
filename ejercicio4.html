@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Factura</title>
+</head>
+<script>
+
+    for(let contador=1;contador<=2;contador++){
+    var nombre_cliente=prompt("Ingrese su nombre")
+    var precio_compra=parseFloat(prompt("Ingrese el valor de la Compra"))
+    var modelo=prompt("Ingrese el Modelo:  A1,A2 o A3")
+    let tarjeta=prompt("Paga con tarjeta: SI o NO")
+       
+    switch(modelo){
+     case "A1": document.write(`<h1>COMPUTADORAS Y MAS</h1><br>`)
+                document.write(`<h2>Factura Cliente #${contador}</h2>`)
+                document.write(`<strong>Nombre del Cliente:</strong> ${nombre_cliente}</p>`)
+                document.write(`<strong>Modelo Comprado:</strong> ${modelo}</p>`)
+                document.write(`<p><strong>Subtotal:</strong> ${precio_compra}</p>`)
+                document.write(`<p><strong>Descuento:</strong> ${precio_compra*0.10}</p>`)
+                document.write(`<p><strong>Pagara con Tarjeta:</strong> ${tarjeta}</p>`)
+                document.write(`<p><strong>Descuento: 10% de la compra</strong></p>`)
+
+                if(tarjeta.toUpperCase()==="SI"){
+                document.write(`<p><strong>Descuento Tarjeta:</strong> ${precio_compra*0.05}</p>`)
+                document.write(`<strong>Total a Pagar:</strong> ${(precio_compra-(precio_compra*0.15))} `)
+                }else if(tarjeta.toUpperCase()==="NO"){
+                    document.write(`<p><strong>Descuento Tarjeta:</strong> ${0}</p>`)
+                    document.write(`<strong>Total a Pagar:</strong> ${precio_compra-(precio_compra*0.10)} `)
+                } break
+
+     case "A2": document.write(`<h1>COMPUTADORAS Y MAS</h1><br>`)
+                document.write(`<h2>Factura Cliente #${contador}</h2><br>`)
+                document.write(`<strong>Nombre del Cliente:</strong> ${nombre_cliente}</p>`)
+                document.write(`<strong>Modelo Comprado:</strong> ${modelo}</p>`)
+                document.write(`<p><strong>subtotal:</strong> ${precio_compra}</p>`)
+                document.write(`<p><strong>Descuento:</strong> ${precio_compra*0.15}</p>`)
+                document.write(`<p><strong>Pagara con Tarjeta:</strong> ${tarjeta}</p>`)
+                document.write(`<p><strong>Descuento: 15% de la compra</strong></p> `)
+
+                if(tarjeta.toUpperCase()==="SI"){
+                document.write(`<p><strong>Descuento Tarjeta:</strong> ${precio_compra*0.05}</p>`)
+                document.write(`<strong>Total a Pagar:</strong> ${(precio_compra-(precio_compra*0.20))} `)
+                }else if(tarjeta.toUpperCase()==="NO"){
+                    document.write(`<p><strong>Descuento Tarjeta:</strong> ${0}</p>`)
+                    document.write(`<strong>Total a Pagar:</strong> ${precio_compra-(precio_compra*0.15)} `)
+                } break
+               
+     case "A3": document.write(`<h1>COMPUTADORAS Y MAS</h1>`)
+                document.write(`<h2>Factura Cliente #${contador}</h2>`)
+                document.write(`<p><strong>Nombre del Cliente:</strong> ${nombre_cliente}</p>`)
+                document.write(`<p><strong>Modelo Comprado:</strong> ${modelo}</p>`)
+                document.write(`<p><strong>Subtotal:</strong> ${precio_compra}</p>`)
+                document.write(`<p><strong>Descuento:</strong> ${precio_compra*0.20}</p>`)
+                document.write(`<p><strong>Pagara con Tarjeta:</strong> ${tarjeta}</p>`)
+                document.write(`<p><strong>Descuento: 20% de la compra</strong></p>`)
+
+                if(tarjeta.toUpperCase()==="SI"){
+                document.write(`<p><strong>Descuento Tarjeta:</strong> ${precio_compra*0.05}</p>`)
+                document.write(`<strong>Total a Pagar:</strong> ${(precio_compra-(precio_compra*0.25))} `)
+                }else if(tarjeta.toUpperCase()==="NO"){
+                    document.write(`<p><strong>Descuento Tarjeta:</strong> ${0}</p>`)
+                    document.write(`<strong>Total a Pagar:</strong> ${precio_compra-(precio_compra*0.20)} `)
+                } break
+                default:alert(`Algo no esta bien, intentalo de nuevo`)
+                break
+        }
+    }
+</script>
+<body>
+    
+</body>
+</html>
